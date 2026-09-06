@@ -1,45 +1,44 @@
-# End-to-End E-Commerce Online Sales Analysis
+# E-Commerce Online Sales Analysis
 
-Dự án phân tích hoạt động kinh doanh thương mại điện tử (End-to-End E-Commerce Sales Analysis) sử dụng tập dữ liệu giao dịch thực tế với quy mô 1.000 bản ghi [48]. Dự án bao gồm toàn bộ vòng đời phân tích dữ liệu: từ việc nhập dữ liệu trực tiếp từ tệp CSV vào hệ quản trị cơ sở dữ liệu **Microsoft SQL Server**, thực thi hệ thống truy vấn phân tích **T-SQL** nâng cao giải quyết các bài toán kinh doanh trọng tâm, cho tới thiết kế bảng điều khiển trực quan tương tác trên **Power BI**, tài liệu hóa báo cáo và tự động hóa thuyết trình bằng AI [48, 49, 53, 57].
+Dự án phân tích hoạt động kinh doanh thương mại điện tử (End-to-End E-Commerce Sales Analysis) sử dụng tập dữ liệu giao dịch thực tế với quy mô 1.000 bản ghi. Dự án bao gồm toàn bộ vòng đời phân tích dữ liệu: từ việc nhập dữ liệu trực tiếp từ tệp CSV vào hệ quản trị cơ sở dữ liệu **Microsoft SQL Server**, thực thi hệ thống truy vấn phân tích **T-SQL** nâng cao giải quyết các bài toán kinh doanh trọng tâm, cho tới thiết kế bảng điều khiển trực quan tương tác trên **Power BI**, tài liệu hóa báo cáo và tự động hóa thuyết trình bằng AI.
 
 ---
 
 ## 📋 Mục tiêu Kinh doanh (Problem Statement)
 Mục tiêu cốt lõi của dự án là phân tích sâu hoạt động kinh doanh thương mại điện tử nhằm khai phá các insight giá trị về:
-1.  **Doanh thu theo chu kỳ thời gian** (tháng trong năm, ngày trong tuần) [48].
-2.  **Cơ cấu sản phẩm và danh mục sản phẩm** đóng góp doanh thu chủ lực [48].
-3.  **Phân bổ thị trường theo thành phố** và hành vi chi tiêu (AOV) của từng khu vực [48].
-4.  **Hành vi mua sắm của khách hàng** (sản phẩm bán chạy nhất theo số lượng so với doanh thu) [48].
+1.  **Doanh thu theo chu kỳ thời gian** (tháng trong năm, ngày trong tuần).
+2.  **Cơ cấu sản phẩm và danh mục sản phẩm** đóng góp doanh thu chủ lực.
+3.  **Phân bổ thị trường theo thành phố** và hành vi chi tiêu (AOV) của từng khu vực.
+4.  **Hành vi mua sắm của khách hàng** (sản phẩm bán chạy nhất theo số lượng so với doanh thu).
 
-Những phát hiện này cung cấp căn cứ dữ liệu vững chắc giúp ban quản lý ra quyết định kinh doanh chiến lược, tối ưu hóa danh mục sản phẩm, cải thiện hiệu quả marketing và nâng cao doanh số toàn diện [48].
+Những phát hiện này cung cấp căn cứ dữ liệu vững chắc giúp ban quản lý ra quyết định kinh doanh chiến lược, tối ưu hóa danh mục sản phẩm, cải thiện hiệu quả marketing và nâng cao doanh số toàn diện.
 
 ---
 
 ## 🛠️ Công cụ & Công nghệ Sử dụng
-*   **Microsoft SQL Server (T-SQL):** Lưu trữ dữ liệu và thực hiện các truy vấn phân tích chuyên sâu (sử dụng Subqueries, CTEs, Window Functions như `ROW_NUMBER()`) [49, 50, 52].
-*   **Power BI Desktop:** Viết các thước đo tính toán bằng ngôn ngữ DAX, thiết lập mô hình dữ liệu và xây dựng dashboard tương tác chuyên nghiệp [53].
-*   **Gamma AI & PowerPoint:** Thiết kế và tự động chuyển đổi tài liệu báo cáo kỹ thuật thành slide thuyết trình cấp quản lý chỉ trong vài phút [42, 43, 57].
+*   **Microsoft SQL Server (T-SQL):** Lưu trữ dữ liệu và thực hiện các truy vấn phân tích chuyên sâu (sử dụng Subqueries, CTEs, Window Functions như `ROW_NUMBER()`).
+*   **Power BI Desktop:** Viết các DAX Messure, thiết lập mô hình dữ liệu và xây dựng dashboard tương tác.
 
 ---
 
-## 📊 Tập dữ liệu (Dataset Overview)
-Tập dữ liệu thô `E-Commerce Sales Analytics.csv` ghi nhận thông tin của 1.000 giao dịch bán hàng trực tuyến [48, 49]:
-*   **Chi tiết đơn hàng:** `Order_ID` (Mã đơn hàng - Khóa chính), `Date` (Thời gian giao dịch) [49].
-*   **Thông tin sản phẩm:** `Product` (Tên sản phẩm), `Category` (Danh mục ngành hàng), `Quantity` (Số lượng bán), `Price` (Đơn giá) [49].
-*   **Thông tin thị trường:** `City` (Thành phố nơi khách hàng thực hiện giao dịch) [49].
+## 📊 Tập dữ liệu
+Tập dữ liệu thô [`data/E-Commerce Sales Analytics.csv`](./data) ghi nhận thông tin của 1.000 giao dịch bán hàng trực tuyến:
+*   **Chi tiết đơn hàng:** `Order_ID` (Mã đơn hàng - Khóa chính), `Date` (Thời gian giao dịch).
+*   **Thông tin sản phẩm:** `Product` (Tên sản phẩm), `Category` (Danh mục ngành hàng), `Quantity` (Số lượng bán), `Price` (Đơn giá).
+*   **Thông tin thị trường:** `City` (Thành phố nơi khách hàng thực hiện giao dịch).
 
 ---
 
 ## 🔄 Quy trình Thực hiện Dự án
 
-### Bước 1: Thiết lập Cơ sở dữ liệu & Nạp dữ liệu
-Dữ liệu từ tệp CSV được kiểm tra cấu trúc sơ bộ và import trực tiếp vào hệ quản trị cơ sở dữ liệu **Microsoft SQL Server** thông qua công cụ SQL Server Management Studio (SSMS) để đảm bảo tính toàn vẹn dữ liệu trước khi chạy các câu lệnh truy vấn [49].
+### Bước 1: Import dữ liệu
+Dữ liệu từ tệp CSV được kiểm tra cấu trúc sơ bộ và import trực tiếp vào hệ quản trị cơ sở dữ liệu **Microsoft SQL Server** thông qua công cụ SQL Server Management Studio (SSMS) để đảm bảo tính toàn vẹn dữ liệu trước khi chạy các câu lệnh truy vấn.
 
-### Bước 2: Phân tích dữ liệu bằng SQL (T-SQL Analysis)
+### Bước 2: Phân tích dữ liệu bằng SQL
 Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câu lệnh SQL tương ứng được thực thi trên SQL Server để trích xuất các chỉ số quan trọng:
 
 #### **Câu 1: Tổng doanh thu theo từng tháng, từ 01/2026 đến 06/2026**
-*   *Mục tiêu:* Theo dõi biến động doanh thu theo thời gian để phát hiện tính chu kỳ [48].
+*   *Mục tiêu:* Theo dõi biến động doanh thu theo thời gian để phát hiện tính chu kỳ.
 *   *Mã SQL:*
     ```sql
     SELECT 
@@ -49,7 +48,7 @@ Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câ
     GROUP BY MONTH(Date)
     ORDER BY Month ASC;
     ```
-*   *Kết quả thực tế [50]:*
+*   *Kết quả*
     | Tháng (2026) | Doanh thu (USD) |
     | :--- | :--- |
     | Tháng 1 (January) | 5,205,216.14 |
@@ -60,7 +59,7 @@ Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câ
     | Tháng 6 (June) | 3,812,833.50 |
 
 #### **Câu 2: Top 5 sản phẩm có tổng doanh thu cao nhất**
-*   *Mục tiêu:* Nhận diện sản phẩm đóng góp tài chính lớn nhất cho hệ thống [48].
+*   *Mục tiêu:* Nhận diện sản phẩm đóng góp doanh thu lớn nhất cho hệ thống.
 *   *Mã SQL:*
     ```sql
     SELECT TOP 5
@@ -70,12 +69,12 @@ Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câ
     GROUP BY Product
     ORDER BY Revenue DESC;
     ```
-*   *Kết quả thực tế [50]:*
-    1.  **Laptop:** 11,411,335.17 USD
-    2.  **Tablet:** 5,933,914.06 USD
-    3.  **Smartphone:** 3,535,262.79 USD
-    4.  **Air Fryer:** 1,533,421.53 USD
-    5.  **Watch:** 1,203,724.82 USD
+*   *Kết quả:*
+    **1.  Laptop:** 11,411,335.17 USD
+    **2.  Tablet:** 5,933,914.06 USD
+    **3.  Smartphone:** 3,535,262.79 USD
+    **4.  Air Fryer:** 1,533,421.53 USD
+    **5.  Watch:** 1,203,724.82 USD
 
 #### **Câu 3: Top 5 danh mục đóng góp doanh thu lớn nhất**
 *   *Mục tiêu:* Xác định nhóm ngành hàng chủ lực để định hình chiến lược phân bổ nguồn lực kinh doanh [48].
