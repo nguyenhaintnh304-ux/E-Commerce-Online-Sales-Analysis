@@ -227,7 +227,7 @@ Nhằm giúp dễ dàng giám sát KPIs theo thời gian thực và tự do tư�
   <img src="images/dashboard.png" width="85%" alt="E-Commerce Sales Analytics Dashboard">
 </p>
 
-1.  **Các thước đo chỉ số chính (KPI Cards):**
+1.  **Các chỉ số chính (KPI Cards):**
     *   **Khách hàng (Number of Customer):** `1,000` người.
     *   **Tổng Doanh thu (Total Revenue):** `$27.62M`.
     *   **Tổng Sản lượng bán ra (Total Sales):** `3,035` sản phẩm.
