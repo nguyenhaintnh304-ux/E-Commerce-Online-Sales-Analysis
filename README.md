@@ -70,11 +70,17 @@ Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câ
     ORDER BY Revenue DESC;
     ```
 *   *Kết quả:*
+
     **1.  Laptop:** 11,411,335.17 USD
+    
     **2.  Tablet:** 5,933,914.06 USD
+    
     **3.  Smartphone:** 3,535,262.79 USD
+    
     **4.  Air Fryer:** 1,533,421.53 USD
+    
     **5.  Watch:** 1,203,724.82 USD
+    
 
 #### **Câu 3: Top 5 danh mục đóng góp doanh thu lớn nhất**
 *   *Mục tiêu:* Xác định nhóm ngành hàng chủ lực để định hình chiến lược phân bổ nguồn lực kinh doanh [48].
