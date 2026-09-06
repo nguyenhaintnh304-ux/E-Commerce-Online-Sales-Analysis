@@ -55,14 +55,14 @@ Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câ
     ```
 *Kết quả*
 
-    | Tháng (2026) | Doanh thu (USD) |
-    | :--- | :--- |
-    | Tháng 1 (January) | 5,205,216.14 |
-    | Tháng 2 (February) | 4,418,598.63 |
-    | Tháng 3 (March) | 4,668,486.26 |
-    | Tháng 4 (April) | 4,655,427.18 |
-    | Tháng 5 (May) | 4,860,089.34 |
-    | Tháng 6 (June) | 3,812,833.50 |
+| Tháng (2026) | Doanh thu (USD) |
+| :--- | :--- |
+| Tháng 1 (January) | 5,205,216.14 |
+| Tháng 2 (February) | 4,418,598.63 |
+| Tháng 3 (March) | 4,668,486.26 |
+| Tháng 4 (April) | 4,655,427.18 |
+| Tháng 5 (May) | 4,860,089.34 |
+| Tháng 6 (June) | 3,812,833.50 |
 
 #### **Câu 2: Top 5 sản phẩm có tổng doanh thu cao nhất**
 
@@ -131,7 +131,7 @@ Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câ
     GROUP BY City
     ORDER BY Revenue DESC;
     ```
-*   *Kết quả:*
+*Kết quả:*
 
 **1. Pune:** 3,262,077.40 USD
     
@@ -159,14 +159,14 @@ Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câ
     ```
 *Kết quả:*
 
-    *   **Bangalore:** 35,776.05 USD *(AOV cao nhất)*
-    *   **Kolkata:** 34,153.33 USD
-    *   **Pune:** 31,981.15 USD
-    *   **Jaipur:** 30,105.63 USD
-    *   **Delhi:** 28,301.45 USD
-    *   *... các thành phố khác ...*
-    *   **Ahmedabad:** 21,487.66 USD
-    *   **Hyderabad:** 19,995.31 USD *(AOV thấp nhất)*
+*   **Bangalore:** 35,776.05 USD *(AOV cao nhất)*
+*   **Kolkata:** 34,153.33 USD
+*   **Pune:** 31,981.15 USD
+*   **Jaipur:** 30,105.63 USD
+*   **Delhi:** 28,301.45 USD
+*   *... các thành phố khác ...*
+*   **Ahmedabad:** 21,487.66 USD
+*   **Hyderabad:** 19,995.31 USD *(AOV thấp nhất)*
 
 #### **Câu 6: Sản phẩm bán chạy nhất theo số lượng so với bán chạy nhất theo doanh thu — có trùng nhau không?**
 
