@@ -93,15 +93,20 @@ Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câ
     GROUP BY Category
     ORDER BY Revenue DESC;
     ```
-*   *Kết quả thực tế [50]:*
-    1.  **Electronics (Điện tử):** 21,606,517.68 USD *(Chủ lực tuyệt đối)*
-    2.  **Home Appliances (Thiết bị gia dụng):** 3,141,481.72 USD
-    3.  **Accessories (Phụ kiện):** 1,630,446.49 USD
-    4.  **Fashion (Thời trang):** 1,152,368.38 USD
-    5.  **Books (Sách):** 89,836.77 USD
+*   *Kết quả:*
+
+    **1.  Electronics (Điện tử):** 21,606,517.68 USD *(Danh mục chủ chốt)*
+    
+    **2.  Home Appliances (Thiết bị gia dụng):** 3,141,481.72 USD
+    
+    **3.  Accessories (Phụ kiện):** 1,630,446.49 USD
+    
+    **4.  Fashion (Thời trang):** 1,152,368.38 USD
+    
+    **5.  Books (Sách):** 89,836.77 USD
 
 #### **Câu 4: Top 5 thành phố có doanh thu cao nhất**
-*   *Mục tiêu:* Định vị các thị trường trọng điểm giúp phân bổ ngân sách marketing theo vùng địa lý [48].
+*   *Mục tiêu:* Định vị các thị trường trọng điểm giúp phân bổ ngân sách marketing theo vùng địa lý.
 *   *Mã SQL:*
     ```sql
     SELECT TOP 5
@@ -111,15 +116,20 @@ Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câ
     GROUP BY City
     ORDER BY Revenue DESC;
     ```
-*   *Kết quả thực tế [50, 51]:*
-    1.  **Pune:** 3,262,077.40 USD
-    2.  **Mumbai:** 3,213,056.46 USD
-    3.  **Jaipur:** 3,161,091.51 USD
-    4.  **Bangalore:** 3,148,292.67 USD
-    5.  **Kolkata:** 2,971,339.48 USD
+*   *Kết quả:*
+
+    **1.  Pune:** 3,262,077.40 USD
+    
+    **2.  Mumbai:** 3,213,056.46 USD
+    
+    **3.  Jaipur:** 3,161,091.51 USD
+    
+    **4.  Bangalore:** 3,148,292.67 USD
+    
+    **5.  Kolkata:** 2,971,339.48 USD
 
 #### **Câu 5: Giá trị đơn hàng trung bình (AOV) theo từng thành phố**
-*   *Mục tiêu:* Đo lường mức độ chịu chi của khách hàng ở từng khu vực để áp dụng chính sách giá phù hợp [48].
+*   *Mục tiêu:* Đo lường mức độ chịu chi của khách hàng ở từng khu vực để áp dụng chính sách giá phù hợp.
 *   *Mã SQL:*
     ```sql
     SELECT 
@@ -129,7 +139,7 @@ Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câ
     GROUP BY City
     ORDER BY AOV DESC;
     ```
-*   *Kết quả thực tế [51]:*
+*   *Kết quả:*
     *   **Bangalore:** 35,776.05 USD *(AOV cao nhất)*
     *   **Kolkata:** 34,153.33 USD
     *   **Pune:** 31,981.15 USD
@@ -140,7 +150,7 @@ Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câ
     *   **Hyderabad:** 19,995.31 USD *(AOV thấp nhất)*
 
 #### **Câu 6: Sản phẩm bán chạy nhất theo số lượng so với bán chạy nhất theo doanh thu — có trùng nhau không?**
-*   *Mục tiêu:* Nhận diện sự khác biệt rõ rệt giữa dòng sản phẩm "phổ thông" thúc đẩy số lượng giao dịch và dòng sản phẩm "cao cấp" mang lại giá trị tài chính lớn [48].
+*   *Mục tiêu:* Nhận diện sự khác biệt rõ rệt giữa dòng sản phẩm "phổ thông" thúc đẩy số lượng giao dịch và dòng sản phẩm "cao cấp" mang lại giá trị tài chính lớn.
 *   *Mã SQL:*
     ```sql
     -- Tìm sản phẩm bán chạy nhất theo Số lượng
@@ -159,13 +169,13 @@ Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câ
     GROUP BY Product
     ORDER BY Revenue DESC;
     ```
-*   *Kết quả thực tế [51]:*
+*   *Kết quả:*
     *   Sản phẩm bán chạy nhất theo **Số lượng**: **T-Shirt** (đã bán **259** sản phẩm).
     *   Sản phẩm bán chạy nhất theo **Doanh thu**: **Laptop** (đạt **11,411,335.17** USD).
-    *   *Insight:* Có sự phân hóa hoàn toàn giữa sản phẩm dẫn đầu về sản lượng bán ra và sản phẩm dẫn đầu về mặt doanh thu [69].
+    *   *Insight:* Có sự phân hóa hoàn toàn giữa sản phẩm dẫn đầu về sản lượng bán ra và sản phẩm dẫn đầu về mặt doanh thu.
 
 #### **Câu 7: Ngày trong tuần nào có doanh thu cao nhất**
-*   *Mục tiêu:* Xác định thời điểm khách hàng mua sắm mạnh mẽ nhất trong tuần để tối ưu lịch quảng cáo và khuyến mãi [54].
+*   *Mục tiêu:* Xác định thời điểm khách hàng mua sắm mạnh mẽ nhất trong tuần để tối ưu lịch quảng cáo và khuyến mãi.
 *   *Mã SQL:*
     ```sql
     SELECT 
@@ -175,14 +185,14 @@ Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câ
     GROUP BY DATENAME(DW, Date)
     ORDER BY Revenue DESC;
     ```
-*   *Kết quả thực tế [51, 52]:*
+*   *Kết quả:*
     *   **Thứ Ba (Tuesday):** 4,874,414.70 USD *(Doanh thu cao nhất tuần)*
     *   **Thứ Hai (Monday):** 4,525,321.22 USD
     *   *... các ngày khác ...*
     *   **Thứ Bảy (Saturday):** 2,769,884.67 USD *(Doanh thu thấp nhất tuần)*
 
 #### **Câu 8: Top 3 sản phẩm doanh thu cao nhất trong mỗi danh mục**
-*   *Mục tiêu:* Trích xuất các sản phẩm "ngôi sao" của từng nhóm hàng bằng cách sử dụng **CTE** và hàm cửa sổ **`ROW_NUMBER()`** nhằm xếp hạng doanh thu trong nội bộ từng danh mục [27].
+*   *Mục tiêu:* Trích xuất các sản phẩm chủ chốt của từng nhóm hàng bằng cách sử dụng **CTE** và hàm cửa sổ **`ROW_NUMBER()`** nhằm xếp hạng doanh thu trong nội bộ từng danh mục.
 *   *Mã SQL:*
     ```sql
     WITH Product_rank AS
@@ -201,7 +211,7 @@ Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câ
     FROM Product_rank
     WHERE Product_rank<=3;
     ```
-*   *Kết quả thực tế [52, 53]:*
+*   *Kết quả thực tế:*
     *   **Accessories:** (1) Watch: 1.20M USD, (2) Backpack: 426.7K USD.
     *   **Electronics:** (1) Laptop: 11.41M USD, (2) Tablet: 5.93M USD, (3) Smartphone: 3.54M USD.
     *   **Home Appliances:** (1) Air Fryer: 1.53M USD, (2) Coffee Maker: 812.7K USD, (3) Mixer: 795.3K USD.
@@ -210,50 +220,41 @@ Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câ
 
 ---
 
-### Bước 3: Power BI - Thiết kế Bảng điều khiển (Dashboard Design)
-Nhằm giúp ban quản lý dễ dàng giám sát KPIs theo thời gian thực và tự do tương tác, dữ liệu từ SQL Server đã được kết nối trực tiếp với Power BI Desktop để thiết kế dashboard **"E-Commerce Sales Analytics Dashboard"** với các tiêu chuẩn thiết kế chuyên nghiệp [30, 53]:
+### Bước 3: Power BI - Thiết kế Dashboard
+Nhằm giúp dễ dàng giám sát KPIs theo thời gian thực và tự do tương tác, dữ liệu từ SQL Server đã được kết nối trực tiếp với Power BI Desktop để thiết kế dashboard **"E-Commerce Sales Analytics Dashboard"** với các tiêu chuẩn thiết kế chuyên nghiệp:
 
 1.  **Các thước đo chỉ số chính (KPI Cards):**
-    *   **Khách hàng (Number of Customer):** `1,000` người [59].
-    *   **Tổng Doanh thu (Total Revenue):** `$27.62M` [63, 65].
+    *   **Khách hàng (Number of Customer):** `1,000` người.
+    *   **Tổng Doanh thu (Total Revenue):** `$27.62M`.
     *   **Tổng Sản lượng bán ra (Total Sales):** `3,035` sản phẩm.
 2.  **Bố cục trực quan & Hệ thống biểu đồ:**
-    *   **Biểu đồ cột (Column Chart):** "Total Revenue by Category" và "Total Revenue by City" để so sánh tổng thể doanh thu của các thị trường và ngành hàng [37].
-    *   **Biểu đồ thanh ngang (Horizontal Bar Chart):** "Total Sales by Category" giúp đánh giá nhanh số lượng sản phẩm bán ra theo từng ngành hàng [37].
-3.  **Bộ lọc tương tác cao (Month Slicers):**
-    *   Thiết kế dải bộ lọc dọc phía bên trái trang dashboard cho phép lọc nhanh theo các tháng từ tháng 1 (January) đến tháng 6 (June) để phân tích chi tiết dữ liệu theo từng chu kỳ [59].
-4.  **Phong cách thiết kế (Theme & Styling):**
-    *   Sử dụng phông nền màu trắng sạch kết hợp các khung chứa biểu đồ bo góc chuyên nghiệp [34].
-    *   Tông màu chủ đạo là **màu hồng cánh sen đậm (Magenta/Pink)** mang lại diện mạo hiện đại, nổi bật và đồng nhất trên toàn bộ các visual [35, 36].
+    *   **Biểu đồ cột (Column Chart):** "Total Revenue by Category" và "Total Revenue by City" để so sánh tổng thể doanh thu của các thị trường và ngành hàng.
+    *   **Biểu đồ thanh ngang (Horizontal Bar Chart):** "Total Sales by Category" giúp đánh giá nhanh số lượng sản phẩm bán ra theo từng ngành hàng.
+3.  **Bộ lọc (Month Slicers):**
+    *   Thiết kế dải bộ lọc dọc phía bên trái trang dashboard cho phép lọc nhanh theo các tháng từ tháng 1 (January) đến tháng 6 (June) để phân tích chi tiết dữ liệu theo từng chu kỳ.
+4.  **Phong cách thiết kế:**
+    *   Sử dụng phông nền màu trắng sạch kết hợp các khung chứa biểu đồ bo góc chuyên nghiệp.
+    *   Tông màu chủ đạo là **màu hồng cánh sen đậm** mang lại diện mạo hiện đại, nổi bật và đồng nhất trên toàn bộ các visual.
 
 ---
 
-### Bước 4 & 5: Báo cáo kỹ thuật & Thuyết trình cấp quản lý
-*   **Báo cáo Dự án (Project Documentation):** Tài liệu hóa chi tiết toàn bộ các mã truy vấn SQL, kết quả phân tích số liệu và các giải pháp đề xuất phục vụ cho việc lưu trữ nội bộ và bàn giao thông tin [2, 41, 42].
-*   **Slide Thuyết trình Gamma AI:** Tải báo cáo dự án định dạng PDF lên công cụ AI **Gamma (GMA)** để tự động thiết kế một bộ slide thuyết trình cực kỳ tinh tế, chuyên nghiệp và trực quan trong vòng chưa đầy 2 phút để sẵn sàng báo cáo trực tiếp trước đối tác hoặc ban giám đốc [2, 42, 43, 57].
+### Bước 4 & 5: Báo cáo kỹ thuật & Thuyết trình
+*   **Báo cáo Dự án:** Tài liệu hóa chi tiết toàn bộ các mã truy vấn SQL, kết quả phân tích số liệu và các giải pháp đề xuất.
+*   **Slide Thuyết trình:** Thiết kế slide thuyết trình chuyên nghiệp và trực quan để dễ dàng báo cáo.
 
 ---
 
-## 📈 Đề xuất Kinh doanh từ dữ liệu (Business Recommendations)
-*   **Tập trung tối ưu hóa ngành hàng mũi nhọn (Focus Inventory):** Ưu tiên quản lý tồn kho và thiết lập các chính sách bảo hành, hậu mãi tối ưu cho **Laptop** và **Tablet** vì hai sản phẩm này thuộc danh mục Electronics đóng góp tới hơn **78% doanh thu** của toàn hệ thống ($21.61M trên tổng $27.62M) [50, 53].
-*   **Chiến lược bán chéo thông minh (Bundle & Cross-sell):** Tận dụng lượng mua khổng lồ của sản phẩm phổ thông như **T-Shirt** (sản phẩm bán chạy nhất về sản lượng - 259 đơn) và phụ kiện (như Backpack) để tạo các combo đóng gói hoặc chương trình khuyến mãi chéo nhằm kích thích mua sắm các thiết bị có giá trị cao [53, 65, 69].
-*   **Tối ưu chiến dịch tiếp thị theo thời gian (Timing Promotions):** Tập trung ngân sách quảng cáo, flash sale, gửi email marketing vào các ngày **Thứ Hai và Thứ Ba** hàng tuần – đây là những khung thời gian ghi nhận hành vi mua sắm mạnh nhất của người tiêu dùng giúp tối đa hóa tỷ lệ chuyển đổi [54].
-*   **Chiến lược marketing phân hóa theo khu vực (City-Segmented Marketing) [54]:**
-    *   *Tại Bangalore và Kolkata:* Đẩy mạnh quảng cáo các dòng sản phẩm phân khúc cao cấp (premium/high-value offerings) vì đây là những khu vực có giá trị đơn hàng trung bình (AOV) vượt trội (đạt trên 34.000 USD/đơn) [51, 54].
-    *   *Tại Ahmedabad và Hyderabad:* Áp dụng các chiến dịch trợ giá, tặng mã coupon hoặc combo tiết kiệm để kích thích gia tăng quy mô đơn hàng tại các thị trường có chỉ số AOV thấp dưới 22.000 USD này [51, 54].
+## 📈 Đề xuất 
+*   **Tập trung tối ưu hóa ngành hàng mũi nhọn:** Ưu tiên quản lý tồn kho và thiết lập các chính sách bảo hành, hậu mãi tối ưu cho **Laptop** và **Tablet** vì hai sản phẩm này thuộc danh mục Electronics đóng góp tới hơn **78% doanh thu** của toàn hệ thống ($21.61M trên tổng $27.62M).
+*   **Chiến lược bán chéo thông minh:** Tận dụng lượng mua khổng lồ của sản phẩm phổ thông như **T-Shirt** (sản phẩm bán chạy nhất về sản lượng - 259 đơn) và phụ kiện (như Backpack) để tạo các combo đóng gói hoặc chương trình khuyến mãi chéo nhằm kích thích mua sắm các thiết bị có giá trị cao.
+*   **Tối ưu chiến dịch tiếp thị theo thời gian:** Tập trung ngân sách quảng cáo, flash sale, gửi email marketing vào các ngày **Thứ Hai và Thứ Ba** hàng tuần – đây là những khung thời gian ghi nhận hành vi mua sắm mạnh nhất của người tiêu dùng giúp tối đa hóa tỷ lệ chuyển đổi.
+*   **Chiến lược marketing phân hóa theo khu vực:**
+    *   *Tại Bangalore và Kolkata:* Đẩy mạnh quảng cáo các dòng sản phẩm phân khúc cao cấp vì đây là những khu vực có giá trị đơn hàng trung bình (AOV) vượt trội (đạt trên 34.000 USD/đơn).
+    *   *Tại Ahmedabad và Hyderabad:* Áp dụng các chiến dịch trợ giá, tặng mã coupon hoặc combo tiết kiệm để kích thích gia tăng quy mô đơn hàng tại các thị trường có chỉ số AOV thấp dưới 22.000 USD này.
 
 ---
 
-## 🚀 Cách Khởi chạy Dự án
-1.  **Bước 1: Thiết lập Hệ thống SQL Server**
-    *   Khởi động MS SQL Server Management Studio (SSMS).
-    *   Tạo một cơ sở dữ liệu mới mang tên `ecommerce_sales`.
-    *   Nhập tệp dữ liệu `E-Commerce Sales Analytics.csv` thành một bảng có tên `sales` [49].
-    *   Chạy các câu lệnh truy vấn phân tích được lưu trữ trong thư mục `sql_queries/` [50].
-2.  **Bước 2: Trực quan hóa trên Power BI**
-    *   Mở tệp Power BI định dạng `.pbix` kèm theo dự án.
-    *   Nhấp chọn **Transform Data** và cập nhật lại chuỗi kết nối (Connection String) dẫn tới cơ sở dữ liệu SQL Server cục bộ của bạn để đồng bộ hóa số liệu.
-    *   Nhấp chọn nút **Refresh** để cập nhật toàn bộ bảng điều khiển tương tác [41].
+## Tác giả
+Dự án mô phỏng quy trình xử lý và phân tích dữ liệu E-Commerce Online Sales Analysis, bao gồm Data Cleaning, SQL Modeling và trực quan hóa qua Power BI.
 
----
-*Dự án được thực hiện nhằm xây dựng và hoàn thiện danh mục phân tích dữ liệu chuyên nghiệp (E-Commerce Sales Analytics Portfolio Project) [1, 3].*
+📫 Liên hệ: *nguyenhaintnh304@gmail.com*
