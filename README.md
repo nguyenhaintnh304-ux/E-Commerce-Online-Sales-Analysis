@@ -4,7 +4,7 @@ Dự án phân tích hoạt động kinh doanh thương mại điện tử (End-
 
 ---
 
-## 📋 Mục tiêu Kinh doanh (Problem Statement)
+## 📋 Mục tiêu 
 Mục tiêu cốt lõi của dự án là phân tích sâu hoạt động kinh doanh thương mại điện tử nhằm khai phá các insight giá trị về:
 1.  **Doanh thu theo chu kỳ thời gian** (tháng trong năm, ngày trong tuần).
 2.  **Cơ cấu sản phẩm và danh mục sản phẩm** đóng góp doanh thu chủ lực.
