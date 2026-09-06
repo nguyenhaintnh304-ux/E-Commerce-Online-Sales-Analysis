@@ -223,6 +223,10 @@ Dưới đây là 8 câu hỏi phân tích kinh doanh thực tế cùng các câ
 ### Bước 3: Power BI - Thiết kế Dashboard
 Nhằm giúp dễ dàng giám sát KPIs theo thời gian thực và tự do tương tác, dữ liệu từ SQL Server đã được kết nối trực tiếp với Power BI Desktop để thiết kế dashboard **"E-Commerce Sales Analytics Dashboard"** với các tiêu chuẩn thiết kế chuyên nghiệp:
 
+<p align="center">
+  <img src="images/dashboard.png" width="85%" alt="E-Commerce Sales Analytics Dashboard">
+</p>
+
 1.  **Các thước đo chỉ số chính (KPI Cards):**
     *   **Khách hàng (Number of Customer):** `1,000` người.
     *   **Tổng Doanh thu (Total Revenue):** `$27.62M`.
